@@ -5,7 +5,7 @@
     "brand": "SunShade",
     "price": 45,
     "rating": 4.8,
-    "stock": 25,
+    "stock": 15,
     "description": "Premium UV400 protection sunglasses with polarized lenses. Perfect for beach outings, summer drives, and outdoor adventures. Features lightweight frame design for all-day comfort.",
     "image": "https://images.unsplash.com/photo-1762328012173-00c725c97afa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     "category": "Accessories"
@@ -16,7 +16,7 @@
     "brand": "EcoShade",
     "price": 65,
     "rating": 4.9,
-    "stock": 15,
+    "stock": 25,
     "description": "Eco-friendly wooden sunglasses crafted from sustainable bamboo. UV400 protection with polarized lenses. Unique grain pattern makes each pair one-of-a-kind.",
     "image": "https://images.unsplash.com/photo-1773308662415-7c8ba771a56b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzdW1tZXIlMjBzdW5nbGFzc2VzJTIwYmVhY2glMjBhY2Nlc3Nvcmllc3xlbnwxfHx8fDE3Nzc0Njc4ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "category": "Accessories"
