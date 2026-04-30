@@ -7,11 +7,8 @@ const ProductCard = ({ product }) => {
 
   return (
     <div
-      className="group relative bg-white rounded-3xl overflow-hidden border border-orange-100 hover:border-orange-300 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
-      style={{
-        animationDelay: `${product.id * 0.15}s`,
-      }}
-    >
+      className="group relative bg-white rounded-3xl overflow-hidden border border-orange-100 hover:border-orange-300 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
+        
       <div className="relative overflow-hidden aspect-square">
         <Image
           src={product.image}
