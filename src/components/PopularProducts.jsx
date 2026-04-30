@@ -8,7 +8,7 @@ const PopularProducts = async() => {
     const res = await fetch("https://sun-cart-a08.vercel.app/products.json")
     const products = await res.json()
 
-    const PopularProducts = products.slice(0, 4);
+    const PopularProducts = products.slice(0, 3);
 
     return (
         <section className="py-16 sm:py-20 lg:py-24 bg-white overflow-hidden">
