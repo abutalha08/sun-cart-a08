@@ -1,6 +1,4 @@
-"use client";
 
-import React from "react";
 import "animate.css";
 import { Award, TrendingUp, Users, Zap } from "lucide-react";
 
