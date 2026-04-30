@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import AppNavbar from "@/components/Navbar";
 import "animate.css";
+import Footer from "@/components/Footer";
 
 
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
       <body>
         <AppNavbar></AppNavbar>
         {children}
+        <Footer></Footer>
         </body>
     </html>
   );
