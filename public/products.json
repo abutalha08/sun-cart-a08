@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 45,
+    "rating": 4.8,
+    "stock": 25,
+    "description": "Premium UV400 protection sunglasses with polarized lenses. Perfect for beach outings, summer drives, and outdoor adventures. Features lightweight frame design for all-day comfort.",
+    "image": "https://images.unsplash.com/photo-1762328012173-00c725c97afa?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Wooden Beach Sunglasses",
+    "brand": "EcoShade",
+    "price": 65,
+    "rating": 4.9,
+    "stock": 15,
+    "description": "Eco-friendly wooden sunglasses crafted from sustainable bamboo. UV400 protection with polarized lenses. Unique grain pattern makes each pair one-of-a-kind.",
+    "image": "https://images.unsplash.com/photo-1773308662415-7c8ba771a56b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzdW1tZXIlMjBzdW5nbGFzc2VzJTIwYmVhY2glMjBhY2Nlc3Nvcmllc3xlbnwxfHx8fDE3Nzc0Njc4ODF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "category": "Accessories"
+  },
+  {
+    "id": 3,
+    "name": "Summer Floral Outfit",
+    "brand": "BeachVibes",
+    "price": 89,
+    "rating": 4.7,
+    "stock": 20,
+    "description": "Elegant floral print outfit perfect for summer occasions. Breathable fabric keeps you cool. Features adjustable waist and flowing silhouette for maximum comfort and style.",
+    "image": "https://images.unsplash.com/photo-1767785829268-6227e8451703?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fFN1bW1lciUyMEZsb3JhbCUyME91dGZpdHxlbnwwfHwwfHx8Mg%3D%3D",
+    "category": "Clothing"
+  },
+  {
+    "id": 4,
+    "name": "Orange Summer Jumpsuit",
+    "brand": "SunnyStyle",
+    "price": 95,
+    "rating": 4.6,
+    "stock": 18,
+    "description": "Vibrant orange jumpsuit that makes a bold summer statement. Lightweight and breathable with a comfortable relaxed fit. Perfect for beach parties and casual outings.",
+    "image": "https://images.unsplash.com/photo-1762327162259-60c4e56b8523?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxzdW1tZXIlMjBmYXNoaW9uJTIwY2xvdGhpbmclMjBvdXRmaXR8ZW58MXx8fHwxNzc3NDY3ODgyfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "category": "Clothing"
+  },
+  {
+    "id": 5,
+    "name": "SPF 50+ Sunscreen",
+    "brand": "SkinGuard",
+    "price": 28,
+    "rating": 4.9,
+    "stock": 50,
+    "description": "Broad spectrum SPF 50+ sunscreen with water-resistant formula. Non-greasy, fast-absorbing protection. Enriched with vitamin E and aloe vera for skin nourishment.",
+    "image": "https://images.unsplash.com/photo-1598662972299-5408ddb8a3dc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxza2luY2FyZSUyMHN1bnNjcmVlbiUyMGJlYXV0eSUyMHByb2R1Y3RzfGVufDF8fHx8MTc3NzQ2Nzg4M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "category": "Skincare"
+  },
+  {
+    "id": 6,
+    "name": "Beach Essentials Kit",
+    "brand": "SummerCare",
+    "price": 75,
+    "rating": 4.8,
+    "stock": 30,
+    "description": "Complete beach essentials kit including sunscreen, moisturizer, and after-sun lotion. Perfectly curated for a complete summer skin protection routine.",
+    "image": "https://images.unsplash.com/photo-1593695284981-7e4beef78ab4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJlYWNoJTIwc2tpbiUyMGNhcmV8ZW58MHx8MHx8fDI%3D",
+    "category": "Skincare"
+  },
+  {
+    "id": 7,
+    "name": "Striped Beach Outfit",
+    "brand": "CoastalChic",
+    "price": 72,
+    "rating": 4.5,
+    "stock": 22,
+    "description": "Classic striped beach outfit with modern twist. Lightweight cotton blend perfect for hot summer days. Versatile design suitable for beach to street style.",
+    "image": "https://images.unsplash.com/photo-1582738509941-360b28c941ea?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8U3RyaXBlZCUyMEJlYWNoJTIwT3V0Zml0fGVufDB8fDB8fHwy",
+    "category": "Clothing"
+  },
+  {
+    "id": 8,
+    "name": "Designer Beach Glasses Set",
+    "brand": "LuxShade",
+    "price": 120,
+    "rating": 5.0,
+    "stock": 10,
+    "description": "Premium designer sunglasses set with interchangeable lenses. Comes with elegant carrying case and cleaning cloth. Perfect gift for summer enthusiasts.",
+    "image": "https://images.unsplash.com/photo-1756725520528-033151195d4c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxMHx8c3VtbWVyJTIwc3VuZ2xhc3NlcyUyMGJlYWNoJTIwYWNjZXNzb3JpZXN8ZW58MXx8fHwxNzc3NDY3ODgxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "category": "Accessories"
+  }
+]
