@@ -142,7 +142,7 @@ export default function Footer() {
             </div>
 
           </div>
-        {/* </div> */}
+        </div>
 
         {/* bottom section */}
         <div className="border-t border-orange-200 mt-10 pt-6 text-center text-gray-600 text-sm sm:text-base">
