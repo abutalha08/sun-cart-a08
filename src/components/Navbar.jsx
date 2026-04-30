@@ -20,12 +20,12 @@ const AppNavbar = () => {
 
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2">
-            <div className="bg-gradient-to-br from-orange-400 to-pink-500 p-2.5 rounded-xl">
+            <div className="bg-linear-to-br from-orange-400 to-pink-500 p-2.5 rounded-xl">
               <Sun className="text-white w-6 h-6" strokeWidth={2.5} />
             </div>
 
             <p className="font-bold text-2xl tracking-tight select-none">
-              <span className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">SunCart</span>
+              <span className="text-2xl font-bold bg-linear-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">SunCart</span>
             </p>
           </Link>
 
@@ -68,7 +68,7 @@ const AppNavbar = () => {
 
               <Link
                 href="/register"
-                className="px-5 py-2.5 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-lg hover:shadow-lg transition-all font-medium"
+                className="px-5 py-2.5 bg-linear-to-r from-orange-500 to-pink-500 text-white rounded-lg hover:shadow-lg transition-all font-medium"
               >
                 Register
               </Link>
