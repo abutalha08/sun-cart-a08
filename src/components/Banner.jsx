@@ -43,7 +43,7 @@ const Banner = () => {
 
                         {/* Buttons */}
                         <div className="animate__animated animate__fadeInUp animate__delay-1s flex flex-col sm:flex-row gap-4">
-                            <button className="group px-8 py-4 bg-gradient-to-r from-orange-500 to-pink-500 text-white rounded-xl hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 font-semibold flex items-center justify-center gap-2">
+                            <button className="group px-8 py-4 bg-linear-to-r from-orange-500 to-pink-500 text-white rounded-xl hover:shadow-2xl hover:shadow-orange-500/25 transition-all duration-300 font-semibold flex items-center justify-center gap-2">
                                 Shop Now
                                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                             </button>
@@ -95,13 +95,13 @@ const Banner = () => {
                                 className="w-full max-w-[580px] h-[450px] sm:h-[550px] lg:h-[580px] mx-auto object-cover rounded-[28px] hover:scale-105 transition-all duration-700"
                             />
 
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/5 via-transparent to-white/10 pointer-events-none" />
+                            <div className="absolute inset-0 bg-linear-to-t from-black/5 via-transparent to-white/10 pointer-events-none" />
                         </div>
 
                         {/* Hot Deals */}
                         <div className="absolute top-8 -left-6 sm:-left-10 z-20 animate__animated animate__fadeInLeft animate__infinite animate__slow bg-white px-5 py-4 rounded-2xl shadow-xl border border-orange-100 min-w-[170px]">
                             <div className="flex items-center gap-3">
-                                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-orange-500 to-pink-500 flex items-center justify-center text-2xl shadow-lg">
+                                <div className="w-12 h-12 rounded-xl bg-linear-to-r from-orange-500 to-pink-500 flex items-center justify-center text-2xl shadow-lg">
                                     🔥
                                 </div>
 
