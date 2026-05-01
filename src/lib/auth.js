@@ -3,7 +3,8 @@ import { MongoClient } from "mongodb";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
 
 const client = new MongoClient(process.env.MONGODB_URI);
-const db = client.db("sunCart");
+
+const db = client.db("sunCart_08");
 
 export const auth = betterAuth({
   database: mongodbAdapter(db, {

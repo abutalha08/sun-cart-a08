@@ -10,7 +10,7 @@ const AppNavbar = () => {
     { name: "Home", path: "/" },
     { name: "Products", path: "/products" },
     { name: "Login", path: "/login" },
-    { name: "Register", path: "/register" },
+    { name: "Register", path: "/signup" },
   ];
 
   return (
@@ -67,7 +67,7 @@ const AppNavbar = () => {
               </Link>
 
               <Link
-                href="/register"
+                href="/signup"
                 className="px-5 py-2.5 bg-linear-to-r from-orange-500 to-pink-500 text-white rounded-lg hover:shadow-lg transition-all font-medium"
               >
                 Register
