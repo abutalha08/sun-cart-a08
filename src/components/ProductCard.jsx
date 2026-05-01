@@ -1,6 +1,7 @@
 import Image from "next/image";
 import "animate.css";
 import { Eye, Star, ShoppingCart } from "lucide-react";
+import Link from "next/link";
 
 const ProductCard = ({ product }) => {
 
@@ -8,7 +9,7 @@ const ProductCard = ({ product }) => {
   return (
     <div
       className="group relative bg-white rounded-3xl overflow-hidden border border-orange-100 hover:border-orange-300 hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-        
+
       <div className="relative overflow-hidden aspect-square">
         <Image
           src={product.image}
@@ -24,7 +25,7 @@ const ProductCard = ({ product }) => {
           </span>
         </div>
 
-        
+
         {product.stock < 20 && (
           <div className="absolute top-4 right-4 z-20">
             <span className="px-3 py-1.5 bg-red-500 text-white text-xs font-semibold rounded-full shadow-md">
@@ -35,10 +36,13 @@ const ProductCard = ({ product }) => {
 
         {/* overlay */}
         <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-center pb-5 px-4">
-          <button className="w-full py-3 bg-white text-gray-900 rounded-xl font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-lg">
+          <Link
+            href={`/products/${product.id}`}
+            className="w-full py-3 bg-white text-gray-900 rounded-xl font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
+          >
             <Eye className="w-4 h-4" />
             View Details
-          </button>
+          </Link>
         </div>
       </div>
 

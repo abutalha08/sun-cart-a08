@@ -1,6 +1,5 @@
 import { Sparkles } from 'lucide-react';
 import Link from 'next/link';
-import React from 'react';
 import ProductCard from './ProductCard';
 
 const PopularProducts = async() => {
@@ -47,9 +46,7 @@ const PopularProducts = async() => {
                 animationDelay: `${index * 0.15}s`,
               }}
             >
-              <Link href={`/products/${product.id}`}>
                 <ProductCard product={product} />
-              </Link>
             </div>
           ))}
         </div>
