@@ -31,9 +31,14 @@ export default function LoginPage() {
       password,
       callbackURL: "/",
     });
-
-    console.log({ data, error });
+    // console.log({ data, error });
   };
+
+  const handleGoogleSignIn = async () => {
+    await authClient.signIn.social({
+        provider: 'google'
+    })
+  }
 
   return (
     <section className="min-h-screen bg-linear-to-br from-orange-50 via-white to-pink-50 px-4 py-10 sm:py-16">
@@ -151,7 +156,7 @@ export default function LoginPage() {
             </div>
           </div>
 
-          <button
+          <button onClick={handleGoogleSignIn}
             type="button"
             className="w-full py-3.5 bg-white border-2 border-gray-200 text-gray-700 cursor-pointer rounded-xl font-semibold 
             flex items-center justify-center gap-3 
