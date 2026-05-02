@@ -6,6 +6,8 @@ import { usePathname, useRouter } from "next/navigation";
 import { Sun, ShoppingCart, Menu, X } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
 import { Avatar } from "@heroui/react";
+import { toast } from "sonner";
+
 
 const AppNavbar = () => {
   const pathname = usePathname();
@@ -17,6 +19,11 @@ const AppNavbar = () => {
 
   const handleSignOut = async () => {
     await authClient.signOut();
+
+    toast.success("Logged out successfully 👋", {
+    description: "You have been signed out",
+  });
+
     router.push("/");
   };
 
