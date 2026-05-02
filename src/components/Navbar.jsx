@@ -8,7 +8,6 @@ import { authClient } from "@/lib/auth-client";
 import { Avatar } from "@heroui/react";
 import { toast } from "sonner";
 
-
 const AppNavbar = () => {
   const pathname = usePathname();
   const router = useRouter();
@@ -21,8 +20,8 @@ const AppNavbar = () => {
     await authClient.signOut();
 
     toast.success("Logged out successfully 👋", {
-    description: "You have been signed out",
-  });
+      description: "You have been signed out",
+    });
 
     router.push("/");
   };
@@ -42,28 +41,23 @@ const AppNavbar = () => {
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-lg border-b border-orange-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
+        
         <div className="flex items-center justify-between h-16">
 
-          {/* LOGO */}
+          {/*  LOGO */}
           <Link href="/" className="flex items-center gap-2">
             <div className="bg-linear-to-br from-orange-400 to-pink-500 p-2.5 rounded-xl">
-              <Sun className="text-white w-6 h-6" strokeWidth={2.5} />
+              <Sun className="text-white w-6 h-6" />
             </div>
-
-            <span className="font-bold text-2xl bg-linear-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
+            <span className="font-bold text-xl sm:text-2xl bg-linear-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
               SunCart
             </span>
           </Link>
 
-          {/* DESKTOP MENU */}
+          {/*  DESKTOP LINKS */}
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/" className={navLinkClass("/")}>
-              Home
-            </Link>
-
-            <Link href="/products" className={navLinkClass("/products")}>
-              Products
-            </Link>
+            <Link href="/" className={navLinkClass("/")}>Home</Link>
+            <Link href="/products" className={navLinkClass("/products")}>Products</Link>
 
             {user && (
               <Link href="/profile" className={navLinkClass("/profile")}>
@@ -73,148 +67,108 @@ const AppNavbar = () => {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-3 sm:gap-5">
 
             {/* CART */}
-            <div className="relative cursor-pointer">
+            <div className="relative cursor-pointer hidden sm:block ">
               <ShoppingCart className="w-6 h-6 text-gray-700 hover:text-orange-500 transition" />
-              <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full font-bold">
+              <span className="absolute -top-2 -right-2 bg-orange-500 text-white text-xs w-5 h-5 flex items-center justify-center rounded-full">
                 0
               </span>
             </div>
 
-            {/* NOT LOGGED IN */}
+            {/* AUTH BUTTONS (DESKTOP ONLY) */}
             {!user && (
-              <div className="hidden md:flex items-center gap-4">
-                <Link
-                  href="/login"
-                  className="text-orange-600 hover:text-orange-700 font-medium transition"
-                >
+              <div className="hidden md:flex items-center gap-3">
+                <Link href="/login" className="text-orange-600 font-medium">
                   Login
                 </Link>
 
                 <Link
                   href="/signup"
-                  className="px-4 py-2 bg-linear-to-r from-orange-500 to-pink-500 text-white rounded-lg hover:shadow-lg transition font-medium"
+                  className="px-4 py-2 bg-linear-to-r from-orange-500 to-pink-500 text-white rounded-lg font-medium hover:shadow-lg"
                 >
                   Register
                 </Link>
               </div>
             )}
 
-            {/* LOGGED IN */}
+            {/* USER */}
             {user && (
-              <div className="hidden md:flex items-center gap-3">
+              <div className=" flex items-center  gap-2 sm:gap-3 min-w-0">
+                <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+                  <Avatar
+                  className="w-8 h-8 shrink-0"
+                  src={user?.image}
+                  name={user?.name}
+                />
 
-                {/* AVATAR SAFE */}
-                <Avatar className="w-8 h-8 cursor-pointer">
-                  <Avatar.Image
-                    src={
-                      user?.image ||
-                      "https://ui-avatars.com/api/?name=" +
-                        encodeURIComponent(user?.name || "User")
-                    }
-                    alt={user?.name || "User"}
-                    referrerPolicy="no-referrer"
-                  />
+                <span className="font-medium text-gray-700 truncate max-w-[90px] sm:max-w-none">
+                  {user?.name?.split(" ")[0]}
+                </span>
+                </div>
 
-                  <Avatar.Fallback>
-                    {user?.name?.[0]?.toUpperCase() || "U"}
-                  </Avatar.Fallback>
-                </Avatar>
-
-                <span className="font-medium text-gray-700">
-  {user?.name?.split(" ")[0] || "User"}
-</span>
-
-                {/* LOGOUT */}
                 <button
                   onClick={handleSignOut}
-                  className="px-4 py-2 bg-red-500 text-white rounded-lg cursor-pointer hover:bg-red-600 transition font-medium active:scale-95"
+                  className="px-4 py-2 bg-red-500 text-white rounded-lg hidden sm:block cursor-pointer"
                 >
                   Logout
                 </button>
               </div>
             )}
 
+            {/* MOBILE RIGHT SIDE AUTH */}
+            {!user && (
+              <div className="md:hidden flex items-center gap-2">
+                <Link href="/login" className="text-orange-600 text-sm">
+                  Login
+                </Link>
+                <Link
+                  href="/signup"
+                  className="px-3 py-1.5 bg-orange-500 text-white rounded-lg text-sm"
+                >
+                  Register
+                </Link>
+              </div>
+            )}
+
             {/* MOBILE MENU BUTTON */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden"
+              className="md:hidden ml-2"
             >
-              {isMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
+              {isMenuOpen ? <X /> : <Menu />}
             </button>
-
           </div>
         </div>
-      </div>
 
-      {/* MOBILE MENU */}
-      {isMenuOpen && (
-        <div className="md:hidden border-t bg-white px-4 py-3 space-y-3">
+        {/* MOBILE MENU */}
+        {isMenuOpen && (
+          <div className="md:hidden border-t border-orange-100 py-3 space-y-3">
 
-          {menuItems.map((item) => (
-            <Link
-              key={item.path}
-              href={item.path}
-              onClick={() => setIsMenuOpen(false)}
-              className={navLinkClass(item.path)}
-            >
-              {item.name}
-            </Link>
-          ))}
-
-          {!user ? (
-            <div className="flex gap-4 pt-3">
-              <Link href="/login" onClick={() => setIsMenuOpen(false)}>
-                Login
-              </Link>
-
+            {menuItems.map((item) => (
               <Link
-                href="/signup"
+                key={item.path}
+                href={item.path}
                 onClick={() => setIsMenuOpen(false)}
-                className="text-orange-500 font-medium"
+                className={navLinkClass(item.path) + " block"}
               >
-                Register
+                {item.name}
               </Link>
-            </div>
-          ) : (
-            <div className="flex justify-between items-center pt-3">
+            ))}
 
-              <Avatar className="w-8 h-8">
-                <Avatar.Image
-                  src={
-                    user?.image ||
-                    "https://ui-avatars.com/api/?name=" +
-                      encodeURIComponent(user?.name || "User")
-                  }
-                  alt={user?.name || "User"}
-                />
-
-                <Avatar.Fallback>
-                  {user?.name?.[0]?.toUpperCase() || "U"}
-                </Avatar.Fallback>
-              </Avatar>
-
-              <span className="font-medium text-gray-700">
-  {user?.name?.split(" ")[0] || "User"}
-</span>
-
+            {user && (
               <button
                 onClick={handleSignOut}
-                className="px-4 py-2 bg-red-500 text-white rounded-lg cursor-pointer"
+                className="w-full text-left text-red-500 font-medium pt-2 cursor-pointer"
               >
                 Logout
               </button>
-            </div>
-          )}
+            )}
 
-        </div>
-      )}
+          </div>
+        )}
+      </div>
     </nav>
   );
 };
