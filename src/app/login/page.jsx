@@ -16,6 +16,7 @@ import {
 } from "@heroui/react";
 import { authClient } from "@/lib/auth-client";
 import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -32,12 +33,24 @@ export default function LoginPage() {
       callbackURL: "/",
     });
     // console.log({ data, error });
+
+     if (!error) {
+      toast.success("Login successful 🎉", {
+        description: "Welcome to SunCart",
+      });
+    
+      router.push("/");
+    } else {
+      toast.error(error.message || "Login failed");
+    }
   };
 
   const handleGoogleSignIn = async () => {
+    toast.loading("Redirecting to Google...");
+
     await authClient.signIn.social({
         provider: 'google'
-    })
+    });
   }
 
   return (

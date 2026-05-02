@@ -1,8 +1,12 @@
+import dns from 'node:dns';
+dns.setServers(['8.8.8.8', '8.8.4.4']);
 import {Outfit} from "next/font/google";
+
 import "./globals.css";
 import AppNavbar from "@/components/Navbar";
 import "animate.css";
 import Footer from "@/components/Footer";
+import { Toaster } from 'sonner';
 
 
 
@@ -24,6 +28,7 @@ export default function RootLayout({ children }) {
       <body>
         <AppNavbar></AppNavbar>
         {children}
+        <Toaster position="top-right" richColors />
         <Footer></Footer>
         </body>
     </html>

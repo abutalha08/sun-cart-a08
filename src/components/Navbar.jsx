@@ -95,13 +95,14 @@ const AppNavbar = () => {
             {user && (
               <div className="hidden md:flex items-center gap-3">
                 <Avatar
-                  src={user.image}
-                  name={user.name}
+                  src={user?.image}
+                  name={user?.name}
+                  referrerPolicy="no-referrer"
                   size="sm"
                   className="cursor-pointer"
                 />
 
-                <span className="font-medium text-gray-700">{user.name}</span>
+                <span className="font-medium text-gray-700">{user?.name[0]}</span>
 
                 <button
                   onClick={handleSignOut}
@@ -144,8 +145,8 @@ const AppNavbar = () => {
           {user && (
             <div className="border-t pt-4 mt-4 flex flex-col gap-3">
               <div className="flex items-center gap-3">
-                <Avatar src={user.image} name={user.name} size="sm" />
-                <span className="font-medium text-gray-700">{user.name}</span>
+                <Avatar src={user?.image} name={user?.name} size="sm" />
+                <span className="font-medium text-gray-700">{user?.name[0]}</span>
               </div>
 
               <button
