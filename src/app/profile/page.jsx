@@ -5,6 +5,7 @@ import { Avatar } from "@heroui/react";
 import "animate.css";
 import { Mail, UserCircle2 } from "lucide-react";
 import { UpdateUserInformation } from "@/components/UpdateUserInformation";
+import Image from "next/image";
 
 const ProfilePage = () => {
   const userData = authClient.useSession();
@@ -20,13 +21,16 @@ const ProfilePage = () => {
         >
           <div className="bg-linear-to-r from-orange-500 to-pink-500 px-6 sm:px-10 py-12 text-white text-center">
             <div className="flex justify-center mb-4">
-              <Avatar
-                src={user?.image}
-                name={user?.name}
-                referrerPolicy="no-referrer"
-                className="w-28 h-28 sm:w-32 sm:h-32 ring-4 ring-white/40 shadow-2xl"
-              />
-            </div>
+  <div className="w-28 h-28 sm:w-32 sm:h-32 relative rounded-full ring-4 ring-white/40 shadow-2xl overflow-hidden">
+    <Image
+      src={user?.image || "/default-avatar.png"}
+      alt={user?.name || "User"}
+      fill
+      className="object-cover"
+      referrerPolicy="no-referrer"
+    />
+  </div>
+</div>
 
             <h1 className="text-2xl sm:text-3xl font-bold">
               {user?.name || "User"}

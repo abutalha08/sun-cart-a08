@@ -5,8 +5,8 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { Sun, ShoppingCart, Menu, X } from "lucide-react";
 import { authClient } from "@/lib/auth-client";
-import { Avatar } from "@heroui/react";
 import { toast } from "sonner";
+import Image from "next/image";
 
 const AppNavbar = () => {
   const pathname = usePathname();
@@ -15,6 +15,9 @@ const AppNavbar = () => {
 
   const userData = authClient.useSession();
   const user = userData.data?.user;
+
+//   console.log("SESSION USER =", user);
+// console.log("IMAGE =", user?.image);
 
   const handleSignOut = async () => {
     await authClient.signOut();
@@ -93,20 +96,24 @@ const AppNavbar = () => {
               </div>
             )}
 
-            {/* USER */}
+            {/* user....... */}
             {user && (
               <div className=" flex items-center  gap-2 sm:gap-3 min-w-0">
                 <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-                  <Avatar
-                  className="w-8 h-8 shrink-0"
-                  src={user?.image}
-                  name={user?.name}
-                />
+  <div className="w-8 h-8 rounded-full overflow-hidden border border-gray-200 shadow-sm">
+  <Image
+    src={user.image}
+    alt={user.name}
+    width={32}
+    height={32}
+    className="object-cover w-full h-full"
+  />
+</div>
 
-                <span className="font-medium text-gray-700 truncate max-w-[90px] sm:max-w-none">
-                  {user?.name?.split(" ")[0]}
-                </span>
-                </div>
+    <span className="font-medium text-gray-700 truncate max-w-[90px] sm:max-w-none">
+      {user.name?.split(" ")[0]}
+    </span>
+  </div>
 
                 <button
                   onClick={handleSignOut}
