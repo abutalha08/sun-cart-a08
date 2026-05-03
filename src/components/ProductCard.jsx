@@ -35,7 +35,7 @@ const ProductCard = ({ product }) => {
         )}
 
         {/* overlay */}
-        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-end justify-center pb-5 px-4">
+        <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-100 sm:opacity-0 sm:group-hover:opacity-100 transition-all duration-300 flex items-end justify-center pb-5 px-4">
           <Link
             href={`/products/${product.id}`}
             className="w-full py-3 bg-white text-gray-900 rounded-xl font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 shadow-lg"
