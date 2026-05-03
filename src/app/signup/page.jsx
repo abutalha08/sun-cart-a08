@@ -36,6 +36,8 @@ export default function  SignUpPage() {
       password,
     });
 
+    await authClient.signOut()
+
     // console.log({ data, error });
 
     if (!error) {
